@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> FAQ page </title>
+  <link href="css/style2.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="top">
+    <div>
+      Contact Us +91 96366 20000 / 01 | medicine@supplychain.com
+    </div>
+  </div>
+  <div class="logo">
+    <div>
+      <table>
+        <tr>
+          <td width="600px" style="font-size:50px;font-family:forte;">
+            <font color="#428bca"> Medical </font>
+            <font color="#000"> Blockchain</font>
+          </td>
+          <td> <br> <br>
+            <font size="4px">
+              <a href="homepage.html">HOME</a>
+              <a href="login.php">LOGIN</a>
+              <a href="register.php">REGISTER</a>
+              <a href="about.html">ABOUT US</a>
+              <a href="contact.html">CONTACT US</a>
+              <a href="faq.html">FAQ's</a>
+            </font>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+  </style>
+  </head>
+
+  <body>
+    <br><br>
+    <h2>Frequently Asked Questions</h2>
+    <br><br>
+    <button class="accordion">How to check if the medicine is counterfeit or original?</button>
+    <div class="panel">
+      <br>
+      <p>Input the QR code img file or enter the universal Product ID.
+        It will display the required details if its original and it will not display anything if its not original.</p>
+      <br>
+    </div>
+
+    <button class="accordion">How to register in the site?</button>
+    <div class="panel">
+      <br>
+      <p>Go to the register button and enter the required details to register yourself.</p>
+      <br>
+    </div>
+
+    <button class="accordion">Can I check medicine details without an account?</button>
+    <div class="panel">
+      <br>
+      <p>Unfortunately No. you must create an account if you want to access the Services.</p>
+      <br>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+
+  </body>
+
+</html>
